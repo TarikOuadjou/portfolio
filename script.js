@@ -5,7 +5,7 @@ const profile = {
   tagline: "I use mathematics, machine learning and software to turn complex data into useful tools.",
   bio: "Fourth-year CentraleSupélec engineering student specializing in data science and machine learning, looking for a six-month internship starting between July and September.",
   email: "tarikouadjou@gmail.com",
-  phone: "+33 7 77 34 95 45",
+  phone: "*",
   github: "https://github.com/tarikouadjou",
   linkedin: "https://www.linkedin.com/in/tarikouadjou"
 };
