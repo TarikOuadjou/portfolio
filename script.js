@@ -3,46 +3,47 @@ const profile = {
   name: "Tarik Ouadjou",
   role: "Data Science and Machine Learning Student",
   tagline: "I use mathematics, machine learning and software to turn complex data into useful tools.",
-  bio: "Fourth-year CentraleSupélec engineering student specializing in data science and machine learning, looking for a six-month internship starting between July and September.",
-  email: "tarikouadjou@gmail.com",
-  phone: "*",
+  bio: "Fourth-year CentraleSupélec engineering student specializing in data science and machine learning, looking for a six-month research internship starting between July and September.",
+  email: "tarik.ouadjou@student-cs.fr",
   github: "https://github.com/tarikouadjou",
   linkedin: "https://www.linkedin.com/in/tarikouadjou"
 };
 
 const education = [
-  { period: "Sept. 2021 — Aug. 2023", title: "Preparatory Class for Grandes Écoles", place: "Lycée Descartes — CPGE", description: "Intensive studies in mathematics, physics and computer science." },
-  { period: "Sept. 2023 — Present", title: "Engineering Degree", place: "CentraleSupélec", description: "Top 3% of the class with a 4.21/4.33 GPA. In parallel, I am pursuing a Master 1 in Fundamental Mathematics at Université Paris-Saclay. Key coursework: algorithms and complexity, advanced probability, statistics and machine learning, information theory, networks and security." },
-  { period: "Sept. 2026 — Present", title: "Master 2 — Mathematics, Vision and Learning (Double Degree)", place: "ENS Paris-Saclay — MVA", description: "Research-oriented double-degree master's degree pursued in parallel with my engineering curriculum at CentraleSupélec, focused on machine learning, statistical learning and optimization." }
+  { period: "Sept. 2021 — Aug. 2023", title: "MP2I–MPI* — Preparatory Class for Grandes Écoles", place: "Lycée Descartes — CPGE", details: ["Two highly intensive years preparing for the French competitive entrance examinations to engineering schools", "Mathematics: analysis, algebra and probability", "Computer science: theoretical foundations of computation, logic and proofs, algorithms and complexity, data structures and programming"] },
+  { period: "Sept. 2023 — Present", title: "Engineering Degree", place: "CentraleSupélec", details: ["Generalist engineering training with a broad foundation in science and technology", "Specialization: SDI — Data and Information Sciences", "Master 1 in Fundamental Mathematics at Université Paris-Saclay, pursued in parallel"], coursework: {
+    "Mathematics": ["Measure theory", "Advanced probability", "Partial differential equations", "Stochastic integration", "Harmonic analysis", "Algebra (M1)", "Mathematics for Machine Learning (M1)"],
+    "Physics": ["Quantum and statistical physics", "Continuum mechanics", "Electronic systems"],
+    "Computer Science": ["Python programming", "Parallel Big Data processing infrastructure", "Large-scale distributed optimization and computing"],
+      "Data & Information Sciences": ["Statistics and learning", "Signal processing", "Optimization", "Machine learning", "Deep learning (Theoretical & Practice)", "Large-scale distributed optimization and computing", "High-dimensional modeling", "Optimization for computer vision", "Reinforcement learning", "AI for the environment", "Image Processing (M1)"]
+  } },
+  { period: "Sept. 2026 — Present", title: "Master 2 — Mathematics, Vision and Learning (Double Degree)", place: "ENS Paris-Saclay — MVA", details: ["Research-oriented master's degree focused on machine learning and artificial intelligence", "Focus: machine learning, statistical learning and optimization", "Current coursework: Foundations of Large Language Models (LLMs) and Object Recognition"] }
 ];
 
 const skills = [
-  { category: "Programming & tools", items: ["Python", "C", "C++", "LaTeX", "OCaml", "HTML", "CSS", "JavaScript", "SQL", "Excel"] },
-  { category: "Languages", items: ["French (native)", "English (B2)"] },
-  { category: "Personal traits", items: ["Methodical", "Curious", "Enthusiastic", "Synthetic"] }
+  { category: "Programming & tools", items: ["Python", "C", "C++", "LaTeX", "SQL", "Excel", "Slurm", "Linux"] },
+  { category: "Languages", items: ["French (native)", "English (C1)"] },
+  { category: "Personal traits", items: ["Methodical", "Curious", "Enthusiastic", "Synthetic", "Autonomous"] }
 ];
 
-const interests = [
-  { title: "Climbing", description: "A sport combining technique and strategic thinking." },
-  { title: "Running", description: "An activity that develops endurance, discipline and mental well-being." }
-];
+const interests = ["Climbing", "Running", "Brazilian Jiu-Jitsu", "Cooking"];
 
 const projects = [
-  { date: "2026-09", title: "SKA DataChallenge 3b", tags: ["Research", "Machine Learning", "Python"], description: "Machine learning work on SKA cosmological data.", report: "This repository contains research work on cosmological data developed during my research internship at Sejong University. The work combines statistical inference, deep learning and high-performance computing.", reportUrl: "", reportConfidential: true, github: "https://github.com/TarikOuadjou/SkaData" },
+  { id: "ska-datachallenge-3b", date: "2026-09", title: "SKA DataChallenge 3b", tags: ["Research", "Machine Learning", "Python"], description: "Machine learning work on SKA cosmological data.", report: "This repository contains research work on cosmological data developed during my research internship at Sejong University. The work combines statistical inference, deep learning and high-performance computing.", reportUrl: "", reportConfidential: true, github: "https://github.com/TarikOuadjou/SkaData" },
   { date: "2025-11", title: "Energy Prediction", tags: ["Machine Learning", "Jupyter"], description: "Energy consumption prediction project developed in a Jupyter Notebook.", report: "A notebook-based machine learning project focused on predicting energy-related data and evaluating model behavior.", reportUrl: "", github: "https://github.com/TarikOuadjou/Energy_Prediction" },
   { date: "2025-05", title: "3D Engine", tags: ["C", "Computer Graphics"], description: "A C-based experiment in 3D rendering and engine development.", report: "A CentraleSupélec project exploring the foundations of a small 3D engine and real-time graphics programming.", reportUrl: "", github: "https://github.com/TarikOuadjou/3D-Engine" },
   { date: "2025-04", title: "Number IA", tags: ["C", "Artificial Intelligence"], description: "An artificial intelligence project implemented in C.", report: "A programming project focused on implementing and experimenting with artificial intelligence concepts in C.", reportUrl: "", github: "https://github.com/TarikOuadjou/Number_IA" },
   { date: "2025-03", title: "Error Correcting Code", tags: ["Python", "Information Theory"], description: "Python implementation and experiments around error-correcting codes.", report: "A Python project exploring how error-correcting codes can detect and recover from corrupted information.", reportUrl: "", github: "https://github.com/TarikOuadjou/Error_Correcting_Code" },
   { date: "2024-02", title: "3DNA", tags: ["Python", "CentraleSupélec"], description: "A CentraleSupélec project based on the 3DNA codebase.", report: "A collaborative academic project based on the 3DNA repository, developed in the context of CentraleSupélec.", reportUrl: "", github: "https://github.com/TarikOuadjou/3DNA" },
   { date: "2024-01", title: "Study of Differential Equations with Fractal Boundaries", tags: ["Applied Mathematics", "Research", "LaTeX"], description: "Research project on the Navier–Stokes equation with fractal boundary conditions.", report: "A research project at CentraleSupélec studying the Navier–Stokes equation under fractal boundary conditions, combining applied mathematics, research and scientific writing.", reportUrl: "", github: "" },
-  { date: "2025-07", title: "Predictive Maintenance for Nuclear Plant Sensors", tags: ["Industrial AI", "Predictive Maintenance"], description: "Predictive maintenance model for nuclear power plant sensor data.", report: "At EDF, I analyzed operational data from nuclear power plants and developed a predictive maintenance model for sensor data. The resulting approach supported maintenance decisions and reduced the number of required interventions by a factor of two.", reportUrl: "", github: "", reportConfidential: true, githubConfidential: true }
+  { id: "edf-predictive-maintenance", date: "2025-07", title: "Predictive Maintenance for Nuclear Plant Sensors", tags: ["Industrial AI", "Predictive Maintenance"], description: "Predictive maintenance model for nuclear power plant sensor data.", report: "At EDF, I analyzed operational data from nuclear power plants and developed a predictive maintenance model for sensor data. The resulting approach supported maintenance decisions and reduced the number of required interventions by a factor of two.", reportUrl: "", reportConfidential: true, github: "", githubConfidential: true }
 ];
 
 const experience = [
-  { period: "Feb. 2026 — July 2026", title: "Research Intern", place: "Sejong University — Seoul, South Korea", description: "Awarded a competitive CentraleSupélec Foundation scholarship. Developed a probabilistic machine learning pipeline for Bayesian inference on cosmological data as part of the SKA Science Data Challenge.", skills: ["Python", "Deep learning", "High-performance computing"] },
-  { period: "July 2025 — Jan. 2026", title: "Data Scientist Intern", place: "EDF — Saint-Denis, France", description: "Conducted ad-hoc data analyses to support operational issues across nuclear power plants. Developed a predictive maintenance model for nuclear plant sensors.", skills: ["Python", "Predictive maintenance", "Industrial data analysis", "Decision support"] },
-  { period: "Dec. 2023 — Jan. 2025", title: "Secretary General", place: "OSER — Association for Equal Opportunities, Gif-sur-Yvette, France", description: "Ensured statutory and legal compliance for an association with 60 members and a €75k annual budget. Managed the IT department, organized weekly tutoring sessions and led a two-week preparation program for 20 high school students.", skills: ["Organization", "Pedagogy", "Writing", "Project management"] },
-  { period: "Academic year 2023 — 2024", title: "Teaching Assistant", place: "CentraleSupélec — Gif-sur-Yvette, France", description: "Taught applied mathematics to first-year students, covering partial differential equations, convergence, integration and probability.", skills: ["Pedagogy", "Organization", "Communication"] }
+  { period: "Feb. 2026 — July 2026", title: "Research Intern", place: "Sejong University — Seoul, South Korea", highlights: ["Developed a probabilistic machine learning pipeline for Bayesian inference on cosmological data to understand the Epoch of Reionization as part of the SKA Science Data Challenge.", "Awarded a competitive CentraleSupélec Foundation scholarship based on academic merit and research project relevance."], projectLink: "#project-ska-datachallenge-3b", skills: ["Python", "Deep learning", "High-performance computing"] },
+  { period: "July 2025 — Jan. 2026", title: "Data Scientist Intern", place: "EDF — Saint-Denis, France", highlights: ["Conducted ad-hoc data analyses to support operational issues across nuclear power plants.", "Developed a predictive maintenance model for nuclear plant sensors, reducing required maintenance interventions by a factor of two."], projectLink: "#project-edf-predictive-maintenance", skills: ["Python", "Predictive maintenance", "Industrial data analysis", "Decision support"] },
+  { period: "Dec. 2023 — Jan. 2025", title: "Secretary General", place: "OSER — Association for Equal Opportunities, Gif-sur-Yvette, France", highlights: ["Ensured statutory and legal compliance for an association with 60 members and a €75k annual budget.", "Managed the IT department and organized weekly tutoring sessions.", "Led a two-week preparation program for 20 high school students."], skills: ["Organization", "Pedagogy", "Writing", "Project management"] },
+  { period: "Academic year 2023 — 2024", title: "Teaching Assistant", place: "CentraleSupélec — Gif-sur-Yvette, France", highlights: ["Taught applied mathematics to first-year students, covering PDEs, convergence, integration and probability."], skills: ["Pedagogy", "Organization", "Communication"] }
 ];
 
 const routes = [
@@ -78,7 +79,7 @@ function renderHome() {
 function projectEntry(project) {
   const projectIndex = projects.indexOf(project);
   const githubLink = project.github ? `<a href="${project.github}" target="_blank" rel="noopener">GitHub</a>` : (project.githubConfidential ? `<span class="private-note">GitHub confidential</span>` : "");
-  return `<article class="entry"><div class="entry-meta">${formatDate(project.date)}</div><div><h3>${project.title}</h3><div class="entry-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div><p>${project.description}</p><div class="entry-links"><button class="project-details" type="button" data-project="${projectIndex}">Details</button>${githubLink}</div></div></article>`;
+  return `<article class="entry"${project.id ? ` id="project-${project.id}"` : ""}><div class="entry-meta">${formatDate(project.date)}</div><div><h3>${project.title}</h3><div class="entry-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div><p>${project.description}</p><div class="entry-links"><button class="project-details" type="button" data-project="${projectIndex}">Details</button>${githubLink}</div></div></article>`;
 }
 
 function renderProjects() {
@@ -89,11 +90,11 @@ function renderProjects() {
 }
 
 function renderResume() {
-  return `<div class="page"><h2>Resume</h2><div class="section-label">education</div><div class="timeline">${education.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.place}</h3><div class="t-place">${entry.title}</div><p>${entry.description}</p></div>`).join("")}</div><div class="section-label">experience</div><div class="timeline">${experience.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.title}</h3><div class="t-place">${entry.place}</div><p>${entry.description}</p><div class="entry-tags">${entry.skills.map(skill => `<span class="tag">${skill}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">skills</div><div class="skills-grid">${skills.map(skill => `<div class="skill-group"><h4>${skill.category}</h4><div class="skill-chips">${skill.items.map(item => `<span class="tag">${item}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">interests</div><div class="interest-list">${interests.map(interest => `<p><strong>${interest.title}</strong> ${interest.description}</p>`).join("")}</div></div>`;
+  return `<div class="page"><h2>Resume</h2><div class="section-label">Education</div><div class="timeline">${education.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.place}</h3><div class="t-place">${entry.title}</div><ul class="education-details">${entry.details.map(detail => `<li>${detail}</li>`).join("")}</ul>${entry.coursework ? `<details class="coursework"><summary>Coursework</summary><div class="coursework-menu">${Object.entries(entry.coursework).map(([category, courses]) => `<details class="coursework-group"><summary>${category}</summary><ul>${courses.map(course => `<li>${course}</li>`).join("")}</ul></details>`).join("")}</div></details>` : ""}</div>`).join("")}</div><div class="section-label">Experience</div><div class="timeline">${experience.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.title}</h3><div class="t-place">${entry.place}</div>${entry.highlights ? `<ul class="experience-highlights">${entry.highlights.map(highlight => `<li>${highlight}</li>`).join("")}</ul>` : `<p>${entry.description}</p>`}${entry.projectLink ? `<div class="experience-project-link"><a href="${entry.projectLink}">View related project</a></div>` : ""}<div class="entry-tags">${entry.skills.map(skill => `<span class="tag">${skill}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">Skills</div><div class="skills-grid">${skills.map(skill => `<div class="skill-group"><h4>${skill.category}</h4><div class="skill-chips">${skill.items.map(item => `<span class="tag">${item}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">Interests</div><div class="interest-list">${interests.map(interest => `<span class="interest-item">${interest}</span>`).join("")}</div></div>`;
 }
 
 function renderContact() {
-  return `<div class="page"><h2>Contact</h2><p class="tagline">I am looking for a six-month end-of-studies internship starting in April 2027.</p><ul class="contact-list"><li><a href="mailto:${profile.email}">${profile.email}</a></li><li><a href="tel:${profile.phone.replaceAll(" ", "")}">${profile.phone}</a></li><li><a href="${profile.github}" target="_blank" rel="noopener">${profile.github.replace("https://", "")}</a></li><li><a href="${profile.linkedin}" target="_blank" rel="noopener">${profile.linkedin.replace("https://", "")}</a></li></ul></div>`;
+  return `<div class="page"><h2>Contact</h2><p class="tagline">I am looking for a six-month research internship starting between July and September.</p><ul class="contact-list"><li><a href="mailto:${profile.email}">${profile.email}</a></li><li><a href="${profile.github}" target="_blank" rel="noopener">${profile.github.replace("https://", "")}</a></li><li><a href="${profile.linkedin}" target="_blank" rel="noopener">${profile.linkedin.replace("https://", "")}</a></li></ul></div>`;
 }
 
 function projectModal() {
@@ -104,6 +105,7 @@ const views = { home: renderHome, projects: renderProjects, resume: renderResume
 
 function currentRoute() {
   const hash = location.hash.replace("#", "");
+  if (hash.startsWith("project-")) return "projects";
   return views[hash] ? hash : "home";
 }
 
@@ -174,6 +176,9 @@ function render() {
   document.getElementById("app").innerHTML = shell();
   document.getElementById("content").innerHTML = views[currentRoute()]();
   attachEvents();
+  if (location.hash.startsWith("#project-")) {
+    requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "smooth", block: "center" }));
+  }
 }
 
 window.addEventListener("hashchange", render);
