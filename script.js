@@ -1,0 +1,180 @@
+/* Portfolio data: edit this section to personalize the site. */
+const profile = {
+  name: "Tarik Ouadjou",
+  role: "Data Science and Machine Learning Student",
+  tagline: "I use mathematics, machine learning and software to turn complex data into useful tools.",
+  bio: "Fourth-year CentraleSupélec engineering student specializing in data science and machine learning, looking for a six-month internship starting between July and September.",
+  email: "tarikouadjou@gmail.com",
+  phone: "+33 7 77 34 95 45",
+  github: "https://github.com/tarikouadjou",
+  linkedin: "https://www.linkedin.com/in/tarikouadjou"
+};
+
+const education = [
+  { period: "Sept. 2021 — Aug. 2023", title: "Preparatory Class for Grandes Écoles", place: "Lycée Descartes — CPGE", description: "Intensive studies in mathematics, physics and computer science." },
+  { period: "Sept. 2023 — Present", title: "Engineering Degree", place: "CentraleSupélec", description: "Top 3% of the class with a 4.21/4.33 GPA. In parallel, I am pursuing a Master 1 in Fundamental Mathematics at Université Paris-Saclay. Key coursework: algorithms and complexity, advanced probability, statistics and machine learning, information theory, networks and security." },
+  { period: "Sept. 2026 — Present", title: "Master 2 — Mathematics, Vision and Learning (Double Degree)", place: "ENS Paris-Saclay — MVA", description: "Research-oriented double-degree master's degree pursued in parallel with my engineering curriculum at CentraleSupélec, focused on machine learning, statistical learning and optimization." }
+];
+
+const skills = [
+  { category: "Programming & tools", items: ["Python", "C", "C++", "LaTeX", "OCaml", "HTML", "CSS", "JavaScript", "SQL", "Excel"] },
+  { category: "Languages", items: ["French (native)", "English (B2)"] },
+  { category: "Personal traits", items: ["Methodical", "Curious", "Enthusiastic", "Synthetic"] }
+];
+
+const interests = [
+  { title: "Climbing", description: "A sport combining technique and strategic thinking." },
+  { title: "Running", description: "An activity that develops endurance, discipline and mental well-being." }
+];
+
+const projects = [
+  { date: "2026-09", title: "SKA DataChallenge 3b", tags: ["Research", "Machine Learning", "Python"], description: "Machine learning work on SKA cosmological data.", report: "This repository contains research work on cosmological data developed during my research internship at Sejong University. The work combines statistical inference, deep learning and high-performance computing.", reportUrl: "", reportConfidential: true, github: "https://github.com/TarikOuadjou/SkaData" },
+  { date: "2025-11", title: "Energy Prediction", tags: ["Machine Learning", "Jupyter"], description: "Energy consumption prediction project developed in a Jupyter Notebook.", report: "A notebook-based machine learning project focused on predicting energy-related data and evaluating model behavior.", reportUrl: "", github: "https://github.com/TarikOuadjou/Energy_Prediction" },
+  { date: "2025-05", title: "3D Engine", tags: ["C", "Computer Graphics"], description: "A C-based experiment in 3D rendering and engine development.", report: "A CentraleSupélec project exploring the foundations of a small 3D engine and real-time graphics programming.", reportUrl: "", github: "https://github.com/TarikOuadjou/3D-Engine" },
+  { date: "2025-04", title: "Number IA", tags: ["C", "Artificial Intelligence"], description: "An artificial intelligence project implemented in C.", report: "A programming project focused on implementing and experimenting with artificial intelligence concepts in C.", reportUrl: "", github: "https://github.com/TarikOuadjou/Number_IA" },
+  { date: "2025-03", title: "Error Correcting Code", tags: ["Python", "Information Theory"], description: "Python implementation and experiments around error-correcting codes.", report: "A Python project exploring how error-correcting codes can detect and recover from corrupted information.", reportUrl: "", github: "https://github.com/TarikOuadjou/Error_Correcting_Code" },
+  { date: "2024-02", title: "3DNA", tags: ["Python", "CentraleSupélec"], description: "A CentraleSupélec project based on the 3DNA codebase.", report: "A collaborative academic project based on the 3DNA repository, developed in the context of CentraleSupélec.", reportUrl: "", github: "https://github.com/TarikOuadjou/3DNA" },
+  { date: "2024-01", title: "Study of Differential Equations with Fractal Boundaries", tags: ["Applied Mathematics", "Research", "LaTeX"], description: "Research project on the Navier–Stokes equation with fractal boundary conditions.", report: "A research project at CentraleSupélec studying the Navier–Stokes equation under fractal boundary conditions, combining applied mathematics, research and scientific writing.", reportUrl: "", github: "" },
+  { date: "2025-07", title: "Predictive Maintenance for Nuclear Plant Sensors", tags: ["Industrial AI", "Predictive Maintenance"], description: "Predictive maintenance model for nuclear power plant sensor data.", report: "At EDF, I analyzed operational data from nuclear power plants and developed a predictive maintenance model for sensor data. The resulting approach supported maintenance decisions and reduced the number of required interventions by a factor of two.", reportUrl: "", github: "", reportConfidential: true, githubConfidential: true }
+];
+
+const experience = [
+  { period: "Feb. 2026 — July 2026", title: "Research Intern", place: "Sejong University — Seoul, South Korea", description: "Awarded a competitive CentraleSupélec Foundation scholarship. Developed a probabilistic machine learning pipeline for Bayesian inference on cosmological data as part of the SKA Science Data Challenge.", skills: ["Python", "Deep learning", "High-performance computing"] },
+  { period: "July 2025 — Jan. 2026", title: "Data Scientist Intern", place: "EDF — Saint-Denis, France", description: "Conducted ad-hoc data analyses to support operational issues across nuclear power plants. Developed a predictive maintenance model for nuclear plant sensors.", skills: ["Python", "Predictive maintenance", "Industrial data analysis", "Decision support"] },
+  { period: "Dec. 2023 — Jan. 2025", title: "Secretary General", place: "OSER — Association for Equal Opportunities, Gif-sur-Yvette, France", description: "Ensured statutory and legal compliance for an association with 60 members and a €75k annual budget. Managed the IT department, organized weekly tutoring sessions and led a two-week preparation program for 20 high school students.", skills: ["Organization", "Pedagogy", "Writing", "Project management"] },
+  { period: "Academic year 2023 — 2024", title: "Teaching Assistant", place: "CentraleSupélec — Gif-sur-Yvette, France", description: "Taught applied mathematics to first-year students, covering partial differential equations, convergence, integration and probability.", skills: ["Pedagogy", "Organization", "Communication"] }
+];
+
+const routes = [
+  { id: "home", label: "Home" },
+  { id: "projects", label: "Projects" },
+  { id: "resume", label: "Resume" },
+  { id: "contact", label: "Contact" }
+];
+
+let activeTag = "All";
+
+function formatDate(ymd) {
+  const [year, month] = ymd.split("-");
+  const months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+  return months[parseInt(month, 10) - 1] + " " + year;
+}
+
+function heroSvg() {
+  return `<svg viewBox="0 0 320 220" role="img" aria-label="Scatter plot with a fitted curve">
+    <g fill="var(--ink-soft)" opacity="0.55">
+      <circle cx="26" cy="150" r="3"></circle><circle cx="52" cy="170" r="3"></circle><circle cx="70" cy="120" r="3"></circle><circle cx="95" cy="140" r="3"></circle><circle cx="118" cy="95" r="3"></circle><circle cx="140" cy="110" r="3"></circle><circle cx="160" cy="70" r="3"></circle><circle cx="185" cy="88" r="3"></circle><circle cx="205" cy="55" r="3"></circle><circle cx="230" cy="60" r="3"></circle><circle cx="250" cy="35" r="3"></circle><circle cx="275" cy="45" r="3"></circle><circle cx="295" cy="20" r="3"></circle>
+    </g>
+    <path id="fit-line" d="M20,165 C 90,150 130,90 170,80 S 260,40 300,18" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"></path>
+    <line x1="18" y1="18" x2="18" y2="185" stroke="var(--rule)" stroke-width="1"></line><line x1="18" y1="185" x2="305" y2="185" stroke="var(--rule)" stroke-width="1"></line>
+  </svg>`;
+}
+
+function renderHome() {
+  const latest = [...projects].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2);
+  return `<div class="page"><div class="hero"><div><h1>${profile.name}</h1><p class="tagline">${profile.tagline}</p><p>${profile.bio}</p><div class="cta-row"><a class="btn primary" href="#projects">View my projects</a><a class="btn" href="#contact">Get in touch</a></div></div><div class="hero-visual">${heroSvg()}</div></div><div class="section-label">selected projects</div><div class="home-preview-list">${latest.map(projectEntry).join("")}</div></div>`;
+}
+
+function projectEntry(project) {
+  const projectIndex = projects.indexOf(project);
+  const githubLink = project.github ? `<a href="${project.github}" target="_blank" rel="noopener">GitHub</a>` : (project.githubConfidential ? `<span class="private-note">GitHub confidential</span>` : "");
+  return `<article class="entry"><div class="entry-meta">${formatDate(project.date)}</div><div><h3>${project.title}</h3><div class="entry-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div><p>${project.description}</p><div class="entry-links"><button class="project-details" type="button" data-project="${projectIndex}">Details</button>${githubLink}</div></div></article>`;
+}
+
+function renderProjects() {
+  const allTags = ["All", ...new Set(projects.flatMap(project => project.tags))];
+  const sorted = [...projects].sort((a, b) => b.date.localeCompare(a.date));
+  const filtered = activeTag === "All" ? sorted : sorted.filter(project => project.tags.includes(activeTag));
+  return `<div class="page"><h2>Projects</h2><p class="tagline">A selection of research and industrial machine learning work.</p><div class="filter-row">${allTags.map(tag => `<button class="chip ${tag === activeTag ? "active" : ""}" data-tag="${tag}" type="button">${tag}</button>`).join("")}</div>${filtered.length ? filtered.map(projectEntry).join("") : `<p class="empty-note">No project matches this tag yet.</p>`}</div>`;
+}
+
+function renderResume() {
+  return `<div class="page"><h2>Resume</h2><div class="section-label">education</div><div class="timeline">${education.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.place}</h3><div class="t-place">${entry.title}</div><p>${entry.description}</p></div>`).join("")}</div><div class="section-label">experience</div><div class="timeline">${experience.map(entry => `<div class="t-entry"><div class="t-period">${entry.period}</div><h3>${entry.title}</h3><div class="t-place">${entry.place}</div><p>${entry.description}</p><div class="entry-tags">${entry.skills.map(skill => `<span class="tag">${skill}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">skills</div><div class="skills-grid">${skills.map(skill => `<div class="skill-group"><h4>${skill.category}</h4><div class="skill-chips">${skill.items.map(item => `<span class="tag">${item}</span>`).join("")}</div></div>`).join("")}</div><div class="section-label">interests</div><div class="interest-list">${interests.map(interest => `<p><strong>${interest.title}</strong> ${interest.description}</p>`).join("")}</div></div>`;
+}
+
+function renderContact() {
+  return `<div class="page"><h2>Contact</h2><p class="tagline">I am looking for a six-month end-of-studies internship starting in April 2027.</p><ul class="contact-list"><li><a href="mailto:${profile.email}">${profile.email}</a></li><li><a href="tel:${profile.phone.replaceAll(" ", "")}">${profile.phone}</a></li><li><a href="${profile.github}" target="_blank" rel="noopener">${profile.github.replace("https://", "")}</a></li><li><a href="${profile.linkedin}" target="_blank" rel="noopener">${profile.linkedin.replace("https://", "")}</a></li></ul></div>`;
+}
+
+function projectModal() {
+  return `<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden><div class="modal-backdrop" data-close-modal></div><section class="modal-panel"><button class="modal-close" type="button" aria-label="Close project details" data-close-modal>&times;</button><div class="entry-meta" id="modalDate"></div><h2 id="modalTitle"></h2><div class="entry-tags" id="modalTags"></div><p class="modal-summary" id="modalSummary"></p><div class="section-label">project report</div><p id="modalReport"></p><div class="entry-links" id="modalLinks"></div></section></div>`;
+}
+
+const views = { home: renderHome, projects: renderProjects, resume: renderResume, contact: renderContact };
+
+function currentRoute() {
+  const hash = location.hash.replace("#", "");
+  return views[hash] ? hash : "home";
+}
+
+function navLinksHtml() {
+  const route = currentRoute();
+  return routes.map(routeItem => `<a href="#${routeItem.id}" ${routeItem.id === route ? 'aria-current="page"' : ""}>${routeItem.label}</a>`).join("");
+}
+
+function shell() {
+  return `<div class="shell"><aside class="sidebar"><div><div class="brand-name">${profile.name}</div><div class="brand-role">${profile.role}</div></div><nav class="main-nav" aria-label="Main navigation">${navLinksHtml()}</nav><div class="sidebar-footer"><a href="${profile.github}" target="_blank" rel="noopener">github</a><a href="${profile.linkedin}" target="_blank" rel="noopener">linkedin</a><a href="mailto:${profile.email}">email</a></div></aside><main class="main"><div class="mobile-bar"><div class="brand-name" style="font-size:1.05rem">${profile.name}</div><button class="mobile-toggle" id="mobileToggle" type="button" aria-controls="mobileNav" aria-expanded="false">menu</button></div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">${navLinksHtml()}</nav><div id="content"></div></main></div><footer class="page-footer">© ${new Date().getFullYear()} ${profile.name}</footer>${projectModal()}`;
+}
+
+function openProjectModal(projectIndex) {
+  const project = projects[projectIndex];
+  const modal = document.getElementById("projectModal");
+  document.getElementById("modalDate").textContent = formatDate(project.date);
+  document.getElementById("modalTitle").textContent = project.title;
+  document.getElementById("modalTags").innerHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+  document.getElementById("modalSummary").textContent = project.description;
+  document.getElementById("modalReport").textContent = project.report;
+  const reportLink = project.reportUrl ? `<a href="${project.reportUrl}" target="_blank" rel="noopener">Open PDF report</a>` : (project.reportConfidential ? `<span class="private-note">Report confidential</span>` : "");
+  const githubLink = project.github ? `<a href="${project.github}" target="_blank" rel="noopener">Open GitHub</a>` : (project.githubConfidential ? `<span class="private-note">GitHub confidential</span>` : "");
+  document.getElementById("modalLinks").innerHTML = `${reportLink}${githubLink}`;
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  modal.querySelector(".modal-close").focus();
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById("projectModal");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function attachEvents() {
+  const toggle = document.getElementById("mobileToggle");
+  const mobileNav = document.getElementById("mobileNav");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+  document.querySelectorAll(".mobile-nav a, .main-nav a").forEach(link => link.addEventListener("click", () => {
+    if (!mobileNav || !toggle) return;
+    mobileNav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }));
+  document.querySelectorAll(".chip").forEach(chip => chip.addEventListener("click", () => {
+    activeTag = chip.dataset.tag;
+    document.getElementById("content").innerHTML = renderProjects();
+    attachEvents();
+  }));
+  document.querySelectorAll(".project-details").forEach(button => button.addEventListener("click", () => openProjectModal(Number(button.dataset.project))));
+  document.querySelectorAll("[data-close-modal]").forEach(element => element.addEventListener("click", closeProjectModal));
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeProjectModal();
+  }, { once: true });
+  const fitLine = document.getElementById("fit-line");
+  if (fitLine) {
+    requestAnimationFrame(() => fitLine.style.transition = "stroke-dashoffset 1s ease");
+    requestAnimationFrame(() => fitLine.style.strokeDashoffset = "0");
+  }
+}
+
+function render() {
+  document.getElementById("app").innerHTML = shell();
+  document.getElementById("content").innerHTML = views[currentRoute()]();
+  attachEvents();
+}
+
+window.addEventListener("hashchange", render);
+render();
